@@ -10,6 +10,8 @@ This is report app backend. This project use sqlite as database.
 Follow this steps:
 
 1. Copy .env.example file into .env file
+2. Install package: 
+    ```composer install ```
 2. Run migrations and seeders:
     ```php artisan migrate --seed```
 3. Create symbolic link:
