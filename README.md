@@ -10,19 +10,39 @@ This is report app backend. This project use sqlite as database.
 Follow this steps:
 
 1. Copy .env.example file into .env file
+
 2. Install package: 
     ```composer install ```
-2. Run migrations and seeders:
+
+3. Run migrations and seeders:
     ```php artisan migrate --seed```
-3. Create symbolic link:
+
+4. Create symbolic link:
     ```php artisan storage:link```
-4. Run application: 
+
+5. Run application: 
 ```php artisan serve```
-5. Run queue:
+
+6. Run queue:
 ```
 php artisan queue:listen //production
 php artisan queue:work //local
 ```
+
+## Install with Docker
+
+This project use Laravel Sail. Follow this steps:
+
+1. Copy .env.example file into .env file. Then update database config for use MySQL database and uncomment WWWGROUP and WWWUSER
+
+2. Start up: 
+    ```./vendor/bin/sail up```
+
+3. Inside container run migrations and seeders:
+    ```php artisan migrate --seed```
+
+4. Inside container run symbolic link:
+    ```php artisan storage:link```
 
 
 ## Run test
