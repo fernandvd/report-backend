@@ -12,9 +12,11 @@ Follow this steps:
 1. Copy .env.example file into .env file
 2. Run migrations and seeders:
     ```php artisan migrate --seed```
-3. Run application: 
+3. Create symbolic link:
+    ```php artisan storage:link```
+4. Run application: 
 ```php artisan serve```
-4. In other terminal run queue:
+5. Run queue:
 ```
 php artisan queue:listen //production
 php artisan queue:work //local
